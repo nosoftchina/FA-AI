@@ -1,13 +1,12 @@
 # FileAdmin AI插件
 ## 关于插件
-我们可以 FileAdmin8 显示AI按钮，大大加强编写代码效率
+本插件可以 FileAdmin8 显示AI按钮，大大加强编写代码效率
 你也可以在http://www.nosoft.top/docs/index.php?docs=fa-ai查看文档
 觉得不错给个star
-## 观前须知
-1. 本插件不适用于NUUA(http://www.nosoft.top/docs/index.php?docs=nuua)
-2. 本插件的AI网站与锘软无任何关系,与AI网站发生纠纷与锘软无关。您可选择自行更换AI网站
-3. 本插件基于 NLR DevTeam 的 FileAdmin8 实现， FileAdmin 版权归属于 NLR DevTeam 
-4. 本插件基于 Jquery8.22 实现， Jquery 版权不归属于锘软
+本插件不适用于NUUA(http://www.nosoft.top/docs/index.php?docs=nuua)
+本插件的AI网站与锘软无任何关系,与AI网站发生纠纷与锘软无关。您可选择自行更换AI网站
+本插件基于 NLR DevTeam 的 FileAdmin8 实现， FileAdmin 版权归属于 NLR DevTeam 
+本插件基于 Jquery8.22 实现， Jquery 版权不归属于锘软
 ## 使用前提
 本插件是 NLR DevTeam 的 FileAdmin8 实现的，所以你在使用前需安装 FileAdmin8 （https://fileadmin-backend.simsv.com/）
 本插件在 FileAdmin 8.22 环境下编写并测试，其余版本不保证有效
