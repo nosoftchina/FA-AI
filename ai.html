@@ -1,0 +1,58 @@
+<!--引用Jquery库-->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<div id="ai" style="position:absolute;">
+    <button id="aiheader" style="cursor:move;z-index:999;position:absolute;height:40px;width:40px;padding:5px;font-size:1.75rem;" onclick="display('aiweb')">AI</button>
+    <div id="aiweb" style="left:40px;border-radius:5px;resize:both;overflow:auto;border:1px solid #CDCDCD;z-index:998;position:absolute;width:250px;height:400px;">
+        <iframe width="100%" style="height:100%;" frameborder="0" src="https://chat18.aichatos8.com/">
+            <p>你的浏览器暂不支持AI工具</p>
+        </iframe>
+    </div>
+</div>
+<script>
+    function display(id) {
+        var traget = document.getElementById(id);
+        if (traget.style.display == "none") {
+            traget.style.display = "";
+        } else {
+            traget.style.display = "none";
+        }
+    }
+    dragElement(document.getElementById("ai"));
+
+    function dragElement(elmnt) {
+        var pos1 = 0,
+            pos2 = 0,
+            pos3 = 0,
+            pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+            document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+            elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+
+        function closeDragElement() {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    }
+</script>
